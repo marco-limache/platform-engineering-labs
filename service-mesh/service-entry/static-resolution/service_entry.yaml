@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1
+kind: ServiceEntry
+metadata:
+  name: myapp.com
+spec:
+  hosts:
+  - myapp.com
+  location: MESH_EXTERNAL
+  ports:
+  - number: 80
+    name: http
+    protocol: HTTP
+  resolution: STATIC
+  endpoints:
+  - address: 172.30.32.211
+    ports:
+      http: 80

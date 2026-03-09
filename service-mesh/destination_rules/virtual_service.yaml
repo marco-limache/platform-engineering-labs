@@ -16,10 +16,10 @@ spec:
         port:
           number: 5000
         subset: v1
-      weight: 95
+      weight: 10
     - destination:
         host: helloworld
         port:
           number: 5000
         subset: v2
-      weight: 5
+      weight: 90
